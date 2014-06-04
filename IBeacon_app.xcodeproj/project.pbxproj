@@ -21,6 +21,8 @@
 		A0FC33BD193DD6E3000255D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FC339F193DD6E3000255D3 /* UIKit.framework */; };
 		A0FC33C5193DD6E3000255D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0FC33C3193DD6E3000255D3 /* InfoPlist.strings */; };
 		A0FC33C7193DD6E3000255D3 /* IBeacon_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC33C6193DD6E3000255D3 /* IBeacon_appTests.m */; };
+		A0FC33D1193DD6F9000255D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FC33D0193DD6F9000255D3 /* CoreLocation.framework */; };
+		A0FC33D4193E062F000255D3 /* TimesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FC33D3193E062F000255D3 /* TimesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		A0FC33C2193DD6E3000255D3 /* IBeacon_appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBeacon_appTests-Info.plist"; sourceTree = "<group>"; };
 		A0FC33C4193DD6E3000255D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A0FC33C6193DD6E3000255D3 /* IBeacon_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBeacon_appTests.m; sourceTree = "<group>"; };
+		A0FC33D0193DD6F9000255D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A0FC33D2193E062F000255D3 /* TimesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesTableViewController.h; sourceTree = "<group>"; };
+		A0FC33D3193E062F000255D3 /* TimesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FC33D1193DD6F9000255D3 /* CoreLocation.framework in Frameworks */,
 				A0FC339E193DD6E3000255D3 /* CoreGraphics.framework in Frameworks */,
 				A0FC33A0193DD6E3000255D3 /* UIKit.framework in Frameworks */,
 				A0FC339C193DD6E3000255D3 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		A0FC339A193DD6E3000255D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0FC33D0193DD6F9000255D3 /* CoreLocation.framework */,
 				A0FC339B193DD6E3000255D3 /* Foundation.framework */,
 				A0FC339D193DD6E3000255D3 /* CoreGraphics.framework */,
 				A0FC339F193DD6E3000255D3 /* UIKit.framework */,
@@ -117,6 +124,8 @@
 				A0FC33AD193DD6E3000255D3 /* Main.storyboard */,
 				A0FC33B0193DD6E3000255D3 /* ViewController.h */,
 				A0FC33B1193DD6E3000255D3 /* ViewController.m */,
+				A0FC33D2193E062F000255D3 /* TimesTableViewController.h */,
+				A0FC33D3193E062F000255D3 /* TimesTableViewController.m */,
 				A0FC33B3193DD6E3000255D3 /* Images.xcassets */,
 				A0FC33A2193DD6E3000255D3 /* Supporting Files */,
 			);
@@ -199,6 +208,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Dewire;
 				TargetAttributes = {
+					A0FC3397193DD6E3000255D3 = {
+						DevelopmentTeam = 4ACN9UD8E3;
+					};
 					A0FC33B8193DD6E3000255D3 = {
 						TestTargetID = A0FC3397193DD6E3000255D3;
 					};
@@ -251,6 +263,7 @@
 			files = (
 				A0FC33B2193DD6E3000255D3 /* ViewController.m in Sources */,
 				A0FC33AC193DD6E3000255D3 /* AppDelegate.m in Sources */,
+				A0FC33D4193E062F000255D3 /* TimesTableViewController.m in Sources */,
 				A0FC33A8193DD6E3000255D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +389,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IBeacon_app/IBeacon_app-Prefix.pch";
 				INFOPLIST_FILE = "IBeacon_app/IBeacon_app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +406,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IBeacon_app/IBeacon_app-Prefix.pch";
 				INFOPLIST_FILE = "IBeacon_app/IBeacon_app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
